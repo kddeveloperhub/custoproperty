@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #001f3f;
+    /* Dark blue background */
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(stars.png);
+    background-size: cover;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    top: 10%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translate(-50%, -30%);
+    }
+    50% {
+        transform: translate(-50%, -10%);
+    }
+}
+
+.cake {
+    position: absolute;
+    bottom: 30%;
+    left: 63%;
+    width: 150px;
+    height: 100px;
+    transform: translate(-50%, 0);
+}
+
+.tier {
+    width: 100%;
+    height: 30px;
+    background: #ff69b4;
+    /* Pink color */
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.candles {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.candle {
+    width: 10px;
+    height: 40px;
+    background: #ffd700;
+    position: relative;
+    bottom: 10px;
+    /* Adjust according to cake height */
+    border-radius: 5px;
+    animation: lightUp 0.5s forwards;
+}
+
+#candle1 {
+    animation-delay: 0.5s;
+}
+
+#candle2 {
+    animation-delay: 1s;
+}
+
+#candle3 {
+    animation-delay: 1.5s;
+}
+
+@keyframes lightUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.birthday-wish {
+    position: absolute;
+    top: 33%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    color: #ff1493;
+    font-size: 2.5em;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.balloons {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.balloon {
+    width: 40px;
+    height: 60px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 5px;
+    animation: floatBalloon 3s ease-in-out infinite;
+    left: 206px;
+}
+
+.balloon1 {
+    background: #ff1493;
+}
+
+.balloon2 {
+    background: #ff4500;
+}
+
+.balloon3 {
+    background: #00bfff;
+}
+
+@keyframes floatBalloon {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.confetti {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.8) 10%, transparent 10%), radial-gradient(circle, rgba(0, 255, 0, 0.8) 10%, transparent 10%), radial-gradient(circle, rgba(0, 0, 255, 0.8) 10%, transparent 10%);
+    background-size: 10% 10%;
+    animation: rain 3s infinite;
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    animation: glowEffect 3s infinite alternate;
+}
+
+@keyframes glowEffect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.image-reveal img {
+    width: 435px;
+}
+
+.image-reveal {
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: reveal 1s forwards 2s;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translate(-50%, -20%);
+    }
+}
+
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: yellow;
+    border-radius: 50%;
+    animation: sparkle 0.5s forwards;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20px) scale(2);
+        opacity: 0;
+    }
+}

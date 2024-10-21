@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Birthday Greeting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="stars"></div>
+        <div class="cloud"></div>
+        <div class="cake">
+            <div class="tier"></div>
+            <div class="tier"></div>
+            <div class="tier"></div>
+            <div class="candles">
+                <div class="candle" id="candle1"></div>
+                <div class="candle" id="candle2"></div>
+                <div class="candle" id="candle3"></div>
+            </div>
+        </div>
+        <h1 class="birthday-wish">Happy Birthday, <span id="name">Monu</span></h1>
+        <div class="balloons">
+            <div class="balloon balloon1"></div>
+            <div class="balloon balloon2"></div>
+            <div class="balloon balloon3"></div>
+        </div>
+        <div class="confetti"></div>
+        <div class="glow"></div>
+        <div class="image-reveal">
+            <img src="images/2.jpg" alt="Birthday Boy 2" class="birthday-boy" />
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Add sparkles to candles
+        const candles = document.querySelectorAll('.candle');
+
+        candles.forEach(candle => {
+            candle.addEventListener('animationend', () => {
+                const sparkles = document.createElement('div');
+                sparkles.classList.add('sparkle');
+                candle.appendChild(sparkles);
+                setTimeout(() => {
+                    sparkles.remove();
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

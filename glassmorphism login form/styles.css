@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/pexels-pixabay-147411.jpg');
+}
+
+.container {
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+    opacity: 80%;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    color: white;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    /* Slightly transparent for a glassy effect */
+    color: white;
+    transition: background 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.4);
+    /* More opaque on focus */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 255, 255, 0.6);
+    /* Bright cyan button */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: rgba(0, 255, 255, 0.8);
+    /* Darker on hover */
+}
+
+@media screen and (min-width: 420px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url(https://source.unsplash.com/random/1920x1080) no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        background-image: url(images/pexels-pixabay-147411.jpg);
+    }
+}
